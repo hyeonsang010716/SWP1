@@ -3,6 +3,7 @@ lines = fH.readlines()
 fH.close()
 fH = open('test17.out', 'w')
 for line in lines:
-    words = line.split(' ')
-    fH.write(words[0] + '\n')
+    words = line.split()
+    for word in words:
+        fH.write(word + '\n')
 fH.close()
