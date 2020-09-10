@@ -11,11 +11,7 @@ for line in fH:
     words = line.split()
 
     for word in words:
-        if word in wordcount:
-            wordcount[word] += 1
-        else:
-            wordcount[word] = 1
-
+	wordcount[word] = wordcount.get(word, 0) + 1		
 fH.close()
 
 for word in wordcount:
